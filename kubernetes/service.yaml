@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: web-app-service
+spec:
+  type: NodePort       # Allows external access
+  selector:
+    app: web-app
+  ports:
+    - port: 80         # Port on the Service
+      targetPort: 5000 # Port on the Container
+      nodePort: 30005  # Fixed port for easy access
