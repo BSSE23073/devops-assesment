@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        DOCKERHUB_USER = 'YOUR_DOCKERHUB_USER' 
+        DOCKERHUB_USER = 'abdullahjabbar73' 
         IMAGE_NAME = 'devops-lab'
         TAG = 'latest'
     }
@@ -28,4 +28,5 @@ pipeline {
             }
         }
     }
+
 }
