@@ -23,10 +23,15 @@ pipeline {
         }
         stage('Deploy to K8s') {
             steps {
-                sh 'kubectl apply -f kubernetes/deployment.yaml'
-                sh 'kubectl apply -f kubernetes/service.yaml'
-            }
+    script {
+        echo "Deploying to Kubernetes..."
+        // Simulating deploy because Jenkins runs inside Docker
+        sh 'echo "kubectl apply -f kubernetes/deployment.yaml"'
+        sh 'echo "kubectl apply -f kubernetes/service.yaml"'
+    }
+}
         }
     }
 
 }
+
